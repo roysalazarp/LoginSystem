@@ -4,7 +4,7 @@ session_start();
 
 $GLOBALS['config'] = array (
     'mysql' => array(
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'username' => 'root',
         'password' => '',
         'db' => 'LoginSystem'
