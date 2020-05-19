@@ -4,7 +4,7 @@ session_start();
 
 $GLOBALS['config'] = array (
     'mysql' => array(
-        'host' => '127.0.0.1',
+        'host' => 'https://loginsystemphp.herokuapp.com/',
         'username' => 'root',
         'password' => '',
         'db' => 'LoginSystem'
