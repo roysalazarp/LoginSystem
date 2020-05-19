@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: Helvetica;
+  text-decoration: none;
+  list-style: none;
+}
+
+.grid {
+  text-align: center;
+}
+
+.navbarMenu {
+  grid-area: navbar;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50px;
+  background: rgb(20, 20, 20);
+  background: linear-gradient(0deg, rgba(19, 19, 19, 0.934) 0%, rgba(0,0,0,1) 100%);
+  position: fixed;
+  z-index: 2;
+}
+
+.btn-dropDownMenu {
+  height: 100%;
+  width: 50px;
+  line-height: 50px;
+  background-image: url(dropdownmenu.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  cursor: pointer;
+  display: none;
+}
+.navbar-container ul {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.navbar-container ul li {
+  line-height: 50px;
+}
+
+.navbar-container ul li a {
+  display: block;
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 0 70px;
+}
+
+.navbar-container ul li a:hover {
+  color: rgb(226, 226, 226);
+}
+
+
+.btn-dropDownMenu:hover {
+  opacity: 0.5;
+}
+
+
+.dropDownMenu {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: calc(100vh - 50px);
+  background-color: black;
+  z-index: 2;
+  transition: all 0.6s ease-in-out;
+}
+
+.dropDownMenu ul {
+  padding-top: 15px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.dropDownMenu ul li {
+  line-height: 50px;
+  list-style: none;
+}
+
+.dropDownMenu ul li a {
+  display: block;
+  height: 50px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  font-weight: lighter;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.dropDownMenu ul li a:hover {
+  color: rgb(226, 226, 226);
+}
+
+
+/* RESPONSIVE VERSION */
+
+@media only screen  and (max-width: 1080px) {
+
+  .navbar-container ul li a {
+    padding: 0 55px;
+  }
+}
+
+@media only screen  and (max-width: 800px) {
+  .dropDownMenu {
+    display: block;
+  }
+
+  .btn-dropDownMenu {
+    display: block;
+  }
+  .navbar-container {
+    display: none;
+  }
+}
